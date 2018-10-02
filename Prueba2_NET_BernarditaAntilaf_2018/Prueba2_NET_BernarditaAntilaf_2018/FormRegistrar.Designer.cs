@@ -120,6 +120,7 @@
             // txtRun
             // 
             this.txtRun.Location = new System.Drawing.Point(447, 81);
+            this.txtRun.MaxLength = 8;
             this.txtRun.Name = "txtRun";
             this.txtRun.Size = new System.Drawing.Size(129, 20);
             this.txtRun.TabIndex = 9;

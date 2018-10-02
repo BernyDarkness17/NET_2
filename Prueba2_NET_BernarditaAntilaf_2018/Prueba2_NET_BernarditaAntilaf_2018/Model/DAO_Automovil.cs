@@ -33,5 +33,6 @@ namespace Prueba2_NET_BernarditaAntilaf_2018.Model {
         public DataTable Buscar(string parametro) {
             return Ejecutar("SELECT * FROM automovil WHERE patente like '%" + parametro + "%'; ");
         }
+
     }
 }

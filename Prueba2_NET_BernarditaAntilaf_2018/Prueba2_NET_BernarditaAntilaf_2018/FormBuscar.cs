@@ -26,7 +26,8 @@ namespace Prueba2_NET_BernarditaAntilaf_2018 {
             String busqueda = txtBuscador.Text;
 
             DataTable dt = da.Buscar(busqueda);
-            if (dt.Rows.Count != 0) {
+            if (dt.Rows.Count != 0)
+            {
                 txtPatente.Text = dt.Rows[0][1].ToString();
 
                 txtMarca.Text = dt.Rows[0][2].ToString();
@@ -36,6 +37,8 @@ namespace Prueba2_NET_BernarditaAntilaf_2018 {
                 txtNombreCom.Text = dt.Rows[0][6].ToString();
                 txtNumero.Text = dt.Rows[0][7].ToString();
 
+            }else {
+                msg.Text = "No se encontraron resultados";
             }
 
             //foreach (Automovil aut in dt)) {

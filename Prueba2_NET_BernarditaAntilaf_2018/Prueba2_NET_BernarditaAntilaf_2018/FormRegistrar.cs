@@ -12,6 +12,11 @@ using System.Windows.Forms;
 namespace Prueba2_NET_BernarditaAntilaf_2018 {
     public partial class FormRegistrar : Form {
         private DAO_Automovil da;
+        int Digito;
+        int Cont;
+        int Multiplo;
+        int Acumulador;
+        string RutDigito;
 
         public FormRegistrar() {
             InitializeComponent();
@@ -21,7 +26,7 @@ namespace Prueba2_NET_BernarditaAntilaf_2018 {
         private void btnRegistrarCar_Click(object sender, EventArgs e) {
             Automovil a = new Automovil();
 
-            String rut = txtRun.Text + "-" + txtDigitoVerif;
+            String rut = txtRun.Text + "-" + RutDigito;
 
             a.Patente = txtPatente.Text;
             a.Marca = txtMarca.Text;
@@ -38,13 +43,7 @@ namespace Prueba2_NET_BernarditaAntilaf_2018 {
         private void txtDigitoVerif_TextChanged(object sender, EventArgs e) {
         }
 
-        private void txtRun_TextChanged(object sender, EventArgs e) {
-            int Digito;
-            int Cont;
-            int Multiplo;
-            int Acumulador;
-            string RutDigito;
-
+        private void txtRun_TextChanged(object sender, EventArgs e) {  
             int rut = int.Parse(txtRun.Text);
             Cont = 2;
             Acumulador = 0;
@@ -64,14 +63,16 @@ namespace Prueba2_NET_BernarditaAntilaf_2018 {
 
             if (Digito == 10) {
                 RutDigito = "K";
-                txtDigitoVerif.Text = RutDigito;
+                //txtDigitoVerif.Text = RutDigito;
             }
             if (Digito == 11) {
                 RutDigito = "0";
-                txtDigitoVerif.Text = RutDigito;
+                //txtDigitoVerif.Text = RutDigito;
             } else {
-                txtDigitoVerif.Text = RutDigito;
+                //txtDigitoVerif.Text = RutDigito;
             }
         }
+      
+
     }
 }

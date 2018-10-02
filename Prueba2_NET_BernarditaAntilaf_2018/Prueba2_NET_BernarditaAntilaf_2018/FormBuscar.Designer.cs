@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscador = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.msg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label9
@@ -218,11 +219,21 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // msg
+            // 
+            this.msg.AutoSize = true;
+            this.msg.Location = new System.Drawing.Point(68, 85);
+            this.msg.Name = "msg";
+            this.msg.Size = new System.Drawing.Size(13, 13);
+            this.msg.TabIndex = 38;
+            this.msg.Text = "--";
+            // 
             // FormBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 364);
+            this.Controls.Add(this.msg);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscador);
             this.Controls.Add(this.label9);
@@ -267,5 +278,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscador;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label msg;
     }
 }

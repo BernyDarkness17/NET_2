@@ -24,10 +24,10 @@
         /// </summary>
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtContadorAutos = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrarAutomovilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarAutomovilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtContadorAutos = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,15 +39,6 @@
             this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Autos Registrados:";
-            // 
-            // txtContadorAutos
-            // 
-            this.txtContadorAutos.Location = new System.Drawing.Point(270, 146);
-            this.txtContadorAutos.Name = "txtContadorAutos";
-            this.txtContadorAutos.ReadOnly = true;
-            this.txtContadorAutos.Size = new System.Drawing.Size(100, 20);
-            this.txtContadorAutos.TabIndex = 1;
-            this.txtContadorAutos.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // menuStrip1
             // 
@@ -74,6 +65,15 @@
             this.buscarAutomovilToolStripMenuItem.Text = "Buscar Automovil";
             this.buscarAutomovilToolStripMenuItem.Click += new System.EventHandler(this.buscarAutomovilToolStripMenuItem_Click);
             // 
+            // txtContadorAutos
+            // 
+            this.txtContadorAutos.AutoSize = true;
+            this.txtContadorAutos.Location = new System.Drawing.Point(256, 149);
+            this.txtContadorAutos.Name = "txtContadorAutos";
+            this.txtContadorAutos.Size = new System.Drawing.Size(19, 13);
+            this.txtContadorAutos.TabIndex = 3;
+            this.txtContadorAutos.Text = "----";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -84,6 +84,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -94,10 +95,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtContadorAutos;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem registrarAutomovilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarAutomovilToolStripMenuItem;
+        public System.Windows.Forms.Label txtContadorAutos;
     }
 }
 

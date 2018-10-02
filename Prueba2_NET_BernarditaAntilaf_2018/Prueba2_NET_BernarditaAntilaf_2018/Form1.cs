@@ -16,12 +16,13 @@ namespace Prueba2_NET_BernarditaAntilaf_2018 {
         public Form1() {
             InitializeComponent();
             da = new DAO_Automovil();
-            txtContadorAutos.Text = "" + da.contadorAutos();
+            Numero();
+
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) {
-            txtContadorAutos.Text = ""+ da.contadorAutos()+" autos.";
+            Numero();
         }
 
         private void registrarAutomovilToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -33,5 +34,20 @@ namespace Prueba2_NET_BernarditaAntilaf_2018 {
             FormBuscar form = new FormBuscar();
             form.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e){
+      
+
+        }
+
+        public void Numero() {
+            DataTable dt = da.contadorAutos();
+            if (dt.Rows.Count != 0) {
+                txtContadorAutos.Text = dt.Rows[0][0].ToString();
+            }
+
+
+        }
+      
     }
 }
